@@ -1,7 +1,8 @@
+![la logo](https://user-images.githubusercontent.com/42839573/67322755-818e9400-f4df-11e9-97c1-388bf357353d.png)
 
 ## Hands-On GitOps
 
-### This document contains a number of commands that may prove useful.
+### This document contains a number of commands that may prove useful to the student.
 
 This is the command to install fluxctl on an Ubuntu server.
 > Note: After the publication of this course, the maintainers of snap added the confinement security feature. Depending on Weavework's maintenance of the fluxctl binaries in the snap repositories, it may be necessary to add the "--classic" flag to the flux install command.
@@ -122,7 +123,7 @@ $ fluxctl automate --workload=lamanifest:deployment/hello
 
 The command to use fluxctl to reference a particular image stored in Docker Hub is:
 ```
-$ fluxctl release --workload=lamanifest:deployment/hello --update-image=infraestruturadevops/gitoperations:hellov1.2
+$ fluxctl release --workload=lamanifest:deployment/hello --update-image=linuxacademycontent/gitops:hellov1.2
 ```
 
 The command to remove automation from an existing deployment YAML is:
