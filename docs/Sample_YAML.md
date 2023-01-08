@@ -1,4 +1,4 @@
-![la logo](https://user-images.githubusercontent.com/42839573/67322755-818e9400-f4df-11e9-97c1-388bf357353d.png)
+
 
 ### This file contains other YAML that helps the student with the lessons and labs in Linux Academy's Hands-On GitOps Course
 
