@@ -1,34 +1,25 @@
-name: Docker Image CI
-
+name: Push into main branch
 on:
   push:
-    branches:
-    - feature/*
-  pull_request:
-    branches:
-    - master
+    branches: [ master ]
 
 jobs:
-
-  build:
-
+  context:
     runs-on: ubuntu-latest
-
     steps:
-      
-    - uses: actions/checkout@v3
-    - name: Set up Python 3.7
-      uses: actions/setup-python@v1
-      with:
-        python-version: 3.7
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r ./python/requirements.txt
+    - name: Checkout
+      uses: actions/checkout@v3
 
-    - name: Push Image
-      run: |
-        cd ./python
-        echo "${{ secrets.DOCKER_HUB_LOGIN }}" | docker login -u "guilhermerodriguesti" --password-stdin
-        docker build . --file Dockerfile --tag guilhermerodriguesti/python-app:$(date +%s)
-        docker push guilhermerodriguesti/python-app:$(date +%s)
+    - name: Build
+      id: build
+      uses: cloudposse/github-action-docker-build-push@main
+      with:
+        registry: registry.hub.docker.com
+        organization: "${{ github.event.repository.owner.login }}"
+        repository: "${{ github.event.repository.name }}"
+        login: "${{ secrets.DOCKERHUB_USERNAME }}"
+        password: "${{ secrets.DOCKERHUB_PASSWORD }}"
+
+    outputs:
+      image: ${{ steps.build.outputs.image }}
+      tag: ${{ steps.build.outputs.tag }}
