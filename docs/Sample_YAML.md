@@ -1,6 +1,6 @@
+![la logo](https://user-images.githubusercontent.com/42839573/67322755-818e9400-f4df-11e9-97c1-388bf357353d.png)
 
-
-### This file contains other YAML for Hands-On GitOps.
+### This file contains other YAML that helps the student with the lessons and labs in Linux Academy's Hands-On GitOps Course
 
 The following YAML file is used to create a namespace in the Kubernetes Cluster.
 
@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
       - name: hello
-        image: infraestruturadevops/gitoperations:hellov1.0
+        image: linuxacademycontent/gitops:hellov1.0
 ```
 
 The following is a sample YAML file to create a Service for the hello application.

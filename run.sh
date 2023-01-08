@@ -26,7 +26,6 @@ echo "Copy that RSA key, and let's head back over to GitHub."
 
 fluxctl identity --k8s-fwd-ns flux
 
-
 fluxctl sync --k8s-fwd-ns flux
 
 kubectl get namespaces

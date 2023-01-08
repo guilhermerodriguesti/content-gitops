@@ -1,4 +1,4 @@
-
+![la logo](https://user-images.githubusercontent.com/42839573/67322755-818e9400-f4df-11e9-97c1-388bf357353d.png)
 
 ### Using Manifests With Flux
 
@@ -17,6 +17,6 @@ The YAML provided references a namespace and a container image. They may not be 
 You will want to use the fluxctl automate and release commands to make the YAML work, and you will also need to be sure the namespace that you create is the same as the namespace referenced in the workloads deployment YAML.
 
 The Docker hub Link is:
-https://hub.docker.com/repository/docker/infraestruturadevops/gitoperations
+https://hub.docker.com/repository/docker/linuxacademycontent/gitops
 
 Good Luck!
