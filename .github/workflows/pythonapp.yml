@@ -1,7 +1,11 @@
-name: Push into main branch
+name: Docker Image CI
 on:
   push:
-    branches: [ master ]
+    branches:
+    - feature/*
+  pull_request:
+    branches:
+    - master
 
 jobs:
   context:
